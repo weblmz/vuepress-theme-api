@@ -1,6 +1,9 @@
 import axios from 'axios'
 
-const instance = axios.create()
+const instance = axios.create({
+  // 使用类似cookies,authorization headers(头部授权)或者TLS客户端证书这一类资格证书来创建一个跨站点访问控制（cross-site Access-Control）请求
+  withCredentials: true 
+})
 
 const statusText = {
   '100': 'Continue',
